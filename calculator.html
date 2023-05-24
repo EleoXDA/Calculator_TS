@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div class="theme-selector-container">
+        <label for="theme-selector">Choose a theme:</label>
+        <select id="theme-selector">
+          <option value="theme-default">White</option>
+          <option value="theme-dark">Black</option>
+          <option value="theme-light">Light</option>
+        </select>
+      </div>
+      <div class="calculator">
+        <input type="text" id="result" disabled />
+        <div class="row">
+          <button id="clear">C</button>
+          <button id="open-paren">(</button>
+          <button id="close-paren">)</button>
+          <button id="backspace">del</button>
+        </div>
+        <div class="row">
+          <button id="seven">7</button>
+          <button id="eight">8</button>
+          <button id="nine">9</button>
+          <button id="divide">/</button>
+        </div>
+        <div class="row">
+          <button id="four">4</button>
+          <button id="five">5</button>
+          <button id="six">6</button>
+          <button id="multiply">*</button>
+        </div>
+        <div class="row">
+          <button id="one">1</button>
+          <button id="two">2</button>
+          <button id="three">3</button>
+          <button id="subtract">-</button>
+        </div>
+        <div class="row">
+          <button id="zero">0</button>
+          <button id="decimal">.</button>
+          <button id="equals">=</button>
+          <button id="add">+</button>
+        </div>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>

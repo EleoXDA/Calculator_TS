@@ -1,0 +1,214 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* disable scroll */
+}
+
+.calculator-container {
+  position: relative;
+  max-width: 500px; 
+  margin: auto;
+  padding-top: 40px; /* Make space for the theme selector */
+  width: 90%; /* set width to 90% of viewport */
+}
+
+.theme-selector-container {
+  position: absolute; /* Absolute positioning */
+  left: 50%; /* Position to the center horizontally */
+  transform: translateX(-50%); /* Offset the left positioning by half the element's width */
+  top: 0px; /* Place it above the .calculator-container */
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 10;
+}
+
+.theme-selector-container select {
+  border: none;
+  background-color: transparent;
+}
+
+.theme-default {
+  background-color: #fff; /* Changing the background color of entire page */
+  color: #000;
+}
+
+.theme-default .calculator {
+  background-color: #fff; /* Very dark grey for calculator background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.theme-default button, .theme-default #result {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  background-color: #fff; /* Dark grey for buttons and result screen */
+  color: #000;
+}
+
+.theme-default .theme-selector-container {
+  background-color: #fff; /* Dark grey background for theme selector */
+  color: #010101; /* White text color */
+}
+
+.theme-default .theme-selector-container select {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  background-color: #fff; /* Dark grey background for select dropdown */
+  color: #010101; /* White text color */
+}
+
+.theme-dark {
+  background-color: #000; /* Changing the background color of entire page */
+  color: #fff;
+}
+
+.theme-dark .calculator {
+  background-color: #000;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+.theme-dark button, .theme-dark #result {
+  background-color: #010101; /* Dark grey for buttons and result screen */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.theme-dark .theme-selector-container {
+  background-color: #010101; /* Dark grey background for theme selector */
+  color: #fff; /* White text color */
+}
+
+.theme-dark .theme-selector-container select {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+  background-color: #010101; /* Dark grey background for select dropdown */
+  color: #fff; /* White text color */
+}
+
+
+.theme-dark button:hover {
+  background-color: #222;
+}
+
+.theme-light {
+  background-color: #eee; /* Changing the background color of entire page */
+  color: #000;
+}
+
+.theme-light .calculator {
+  background-color: #eee; /* Very dark grey for calculator background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.theme-light button, .theme-light #result {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #eee; /* Dark grey for buttons and result screen */
+  color: #000;
+}
+
+.theme-light .theme-selector-container {
+  background-color: #eee; /* Dark grey background for theme selector */
+  color: #010101; /* White text color */
+}
+
+.theme-light button:hover {
+  background-color: #ddd;
+}
+
+
+.theme-light .theme-selector-container select {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #eee; /* Dark grey background for select dropdown */
+  color: #010101; /* White text color */
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 2em;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+#result {
+  font-size: 1.5em;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button {
+  font-size: 1em;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 23%;
+  min-height: 40px; /* set minimum height for the buttons */
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+/* Media query for devices smaller than 768px */
+@media (max-width: 768px) {
+  .calculator-container {
+    /* max-width: 100%; */
+    /* padding-top: 40px; */
+  }
+
+  .calculator {
+    font-size: 2.8em;
+    padding: 10px;
+  }
+
+  #result {
+    font-size: 1em;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  button {
+    font-size: 0.8em;
+    padding: 5px;
+    margin: 5px;
+    width: 23%;
+  }
+}
+
+/* Media query for devices smaller than 480px */
+@media (max-width: 480px) {
+  .calculator-container {
+    padding-top: 10px; /* further reduce top padding */
+  }
+
+  .calculator {
+    font-size: 1.2em;
+    padding: 5px;
+  }
+
+  #result {
+    font-size: 0.8em;
+    padding: 2px;
+    margin-bottom: 2px;
+  }
+
+  button {
+    font-size: 0.7em;
+    padding: 2px;
+    margin: 2px;
+    width: 23%;
+  }
+}
