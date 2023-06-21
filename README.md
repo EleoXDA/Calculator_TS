@@ -1,4 +1,4 @@
-# Typescript Calculator
+# Calculator
 
 ![image](https://github.com/EleoXDA/calculator_js/assets/27622683/a2243ee2-348d-446b-a0fb-f4c0dd865e17)
 
